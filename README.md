@@ -1,7 +1,7 @@
 <div align="center">
 
 # 💍 WeddingWise
-### *Smart Luxury & Budget Wedding Planning Platform*
+### *Modern Luxury & Budget Wedding Planning Platform*
 
 [![React](https://img.shields.io/badge/React-19.x-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://react.dev/)
 [![TypeScript](https://img.shields.io/badge/TypeScript-5.x-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
@@ -10,97 +10,109 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
 <p align="center">
-  A modern, responsive, end-to-end wedding planning and financial management application built with React, TypeScript, Tailwind CSS, and jsPDF. Designed to eliminate guesswork, streamline vendor negotiations, track real expenditures, and empower couples to execute their dream celebration within budget.
+  A complete wedding budgeting and event orchestration system. Set your real budget ceiling, calculate category shares, track actual vendor bills, record advance payments, manage guest RSVPs, and generate printable PDF financial reports.
 </p>
 
-[Explore Features](#-core-features) •
-[Quick Start](#-quick-start) •
-[Architecture](#-project-architecture) •
-[Screenshots & Modules](#-modules--screenshots) •
-[Contributing](#-contributing)
+[How to Run](#-how-to-run-this-application) •
+[Core Features](#-core-features) •
+[User Guide](#-how-to-use-the-platform) •
+[Project Architecture](#-project-architecture) •
+[Scripts](#-available-scripts)
 
 </div>
 
 ---
 
-## 🌟 Highlights
+## 🚀 How to Run This Application
 
-- **🎯 Zero Artificial Data Overwrite**: 100% user-driven manual budget input. Categories compute strictly based on your specified financial ceiling.
-- **📊 Real-Time Financial Dashboard**: Instant tracking of Total Planned, Committed Actuals, Advances Settled, and Pending Balances.
-- **🧾 Printable Bill & Voucher System**: Full-page official expense receipts with voucher IDs, vendor details, settlement percentages, and one-click browser print integration (`window.print()`).
-- **💡 AI-Powered Advisor & Savings Engine**: Built-in heuristics alert against budget overruns, cash flow bottlenecks, and unnecessary supplier premiums.
-- **📄 Instant PDF Financial Export**: Generate clean, branded PDF financial reports containing couple summaries, multi-day schedules, and itemized accounts using `jspdf` & `jspdf-autotable`.
-- **📱 Fully Responsive Luxury UI**: Hand-crafted gold and rose aesthetics with fluid mobile, tablet, and desktop viewports.
+Follow these steps to set up and run **WeddingWise** on your computer.
 
----
+### 1. Prerequisites
 
-## 🛠️ Core Features
+Make sure you have **Node.js** installed on your system:
+- **Node.js**: `v18.0.0` or higher (recommended: `v20+` or `v24+`)
+- **npm** (comes bundled with Node.js) or **pnpm** / **yarn**
 
-### 1. 💰 Dynamic Cost Estimator & Parameter Configurator
-- Set your total budget target, duration (number of days), expected headcount, and target city/destination.
-- Supports multiple currency formats: **₹ (INR)**, **$ (USD)**, **€ (EUR)**, **£ (GBP)**, and **AED**.
-- Multi-dimensional preference multipliers:
-  - **Venue & Stay**: Destination Resort, Heritage Palace, Beachfront Villa, 5-Star Banquet, Community Hall.
-  - **Catering & Dining**: Multi-Cuisine, Pure Vegetarian/Maharaj, Gourmet Non-Veg & Seafood, Organic Farm-to-Table.
-  - **Decor & Floral Styling**: Royal Regal, Exotic Floral Extravaganza, Traditional Marigold & Brass, Boho-Chic, Minimalist Pastel.
-  - **Photography & Cinematics**: Candid 4K Cinema + Teasers, Drone Multi-Team, Celebrity Studio, Standard.
-  - **Bridal & Groom Attire**: Haute Couture Handcrafted, Pure Heritage Silks, Custom Tailored, Ready-to-Wear.
-  - **Invitations & Logistics**: Luxury Boxed Hampers, Foil-Stamped Cards, Eco-Seed Paper, Digital-Only RSVPs.
-
-### 2. 🧾 Bills, Expenses & Advance Payments
-- **Dual Display Modes**:
-  - **Invoice Cards View**: Card-based visual tiles displaying category color tags, actual costs, settled advances, pending balance warnings, and payment progress meters.
-  - **Full Table View**: Traditional ledger format for rapid desktop scanning and sorting.
-- **Official Bill Receipt Voucher (`View Full Bill`)**:
-  - Modal displaying official voucher ID, date issued, vendor, ceremony assignment, and contractual notes.
-  - One-click print-ready styling for family records or event coordinators.
-
-### 3. 📅 Multi-Day Celebration Schedule & Itinerary
-- Chronological breakdown for ceremonies (e.g. *Haldi & Mehendi Fiesta*, *Sangeet & Cocktails*, *Pheras & Wedding Vows*, *Grand Reception*).
-- Individual budget allocations, timing, locations, aesthetic themes, and suggested dress codes per event.
-
-### 4. 🏢 Vendor Quotation & Contract Matrix
-- Side-by-side comparison of supplier quotes grouped by service category.
-- Record package inclusions, ratings, contact numbers, and notes.
-- Quick status workflow: `Selected`, `Backup`, `Rejected`, or `In Discussion`.
-
-### 5. 👥 Guest List, RSVPs & Room Allocations
-- Filter guests by affiliation: **Bride’s Side**, **Groom’s Side**, or **Mutual Friends**.
-- Live headcounts accounting for primary guests and plus-ones.
-- Track dietary restrictions (e.g. Jain, Vegan, Allergies) and assigned hotel room / seating numbers.
-
-### 6. ✅ 12-Month Wedding Roadmap & Milestones
-- Chronological milestones broken down into phases (*6-12 Months Before*, *2-3 Months Before*, *1 Week Before*, *Wedding Day*).
-- Dynamic progress bar with celebratory confetti bursts upon milestone completion using `canvas-confetti`.
+To check if Node.js is installed, run:
+```bash
+node -v
+npm -v
+```
+*(If not installed, download it from [nodejs.org](https://nodejs.org/)).*
 
 ---
 
-## 🚀 Quick Start
+### 2. Step-by-Step Setup
 
-### Prerequisites
-- [Node.js](https://nodejs.org/) (version 18.0.0 or higher recommended)
-- `npm`, `pnpm`, or `yarn`
+#### Step 1: Clone or Open the Repository
+```bash
+git clone https://github.com/patelsabirhusain07/WeddingWise.git
+cd WeddingWise
+```
+*(If you already have the folder opened in VS Code or Antigravity terminal, you can skip `git clone`).*
 
-### Installation
+#### Step 2: Install Dependencies
+Install all required packages (React, TypeScript, Lucide Icons, jsPDF, Tailwind CSS, Canvas-Confetti):
+```bash
+npm install
+```
 
-1. **Clone the repository:**
-   ```bash
-   git clone https://github.com/patelsabirhusain07/WeddingWise.git
-   cd WeddingWise
-   ```
+#### Step 3: Start the Development Server
+Run the local Vite development server:
+```bash
+npm run dev
+```
 
-2. **Install dependencies:**
-   ```bash
-   npm install
-   ```
+#### Step 4: Open in Your Browser
+Once the server starts, you will see output like this:
+```
+  VITE v6.x.x  ready in 400 ms
 
-3. **Start the local development server:**
-   ```bash
-   npm run dev
-   ```
+  ➜  Local:   http://localhost:5173/
+  ➜  Network: http://192.168.x.x:5173/
+```
+👉 Click or visit: **[http://localhost:5173/](http://localhost:5173/)** in your web browser.
 
-4. **Open your browser:**
-   Navigate to [http://localhost:5173](http://localhost:5173) to view the live application.
+---
+
+### 3. Build for Production Deployment
+
+To generate an optimized, minified production build:
+```bash
+npm run build
+```
+This will compile all TypeScript and CSS into the `dist/` directory.
+
+To test and preview the production build locally:
+```bash
+npm run preview
+```
+
+---
+
+## 📖 How to Use the Platform
+
+| Step | Section | What to Do |
+| :--- | :--- | :--- |
+| **1** | **Cost Estimator** | Enter your **Overall Budget Target** (e.g. ₹ 15,00,000), total guest count, duration (days), and preferences for Catering, Venue, Decor, and Photography. Click **Save & Calculate Estimates**. |
+| **2** | **Dashboard** | View real-time KPI metrics: **Planned Budget**, **Actual Committed**, **Advance Paid**, and **Pending Balances**. |
+| **3** | **Bills & Expenses** | Manage expenditures using **Invoice Cards** or **Table View**. Click **View Full Bill** on any expense to view and print official financial receipts. |
+| **4** | **Events & Timeline** | Schedule ceremonies (*Mehendi, Sangeet, Pheras, Reception*) with event-specific budgets and dress codes. |
+| **5** | **Vendors & Quotes** | Compare supplier bids side-by-side, view ratings, and update vendor status (*Selected, Backup, Rejected*). |
+| **6** | **Guests & RSVP** | Track guests by Bride/Groom side, headcounts with plus-ones, dietary restrictions, and room allocations. |
+| **7** | **Checklist** | Complete chronological milestones with celebratory confetti bursts. |
+| **8** | **Export PDF** | Click **Export PDF** in the top navigation bar at any time to download your full financial dossier. |
+
+---
+
+## 🌟 Core Features
+
+- **🎯 100% User-Driven Manual Budget**: All category shares start at zero until you enter your amount. No pre-calculated fictitious numbers.
+- **📊 Real-Time Financial Dashboard**: Visual category progress meters, countdown to wedding date, and remaining buffer indicators.
+- **🧾 Printable Bill Receipts & Vouchers**: Dedicated modal displaying formal invoice IDs, settlement percentages, vendor terms, and browser print (`window.print()`) support.
+- **💡 AI Advisor Heuristics**: Automatic warning alerts for budget overruns, pending payouts, and cash flow bottlenecks.
+- **📄 Instant PDF Reports**: Generates professional PDF financial reports with couple names, event itineraries, and payment breakdowns.
+- **📱 Fully Responsive Design**: Built with Tailwind CSS for mobile, tablet, and widescreen layouts.
 
 ---
 
@@ -108,7 +120,7 @@
 
 ```
 WeddingWise/
-├── public/                     # Static assets and icons
+├── public/                     # Favicon and static public assets
 ├── src/
 │   ├── assets/                 # SVGs and branding media
 │   ├── components/             # Reusable UI component modules
@@ -128,35 +140,29 @@ WeddingWise/
 │   │   ├── budgetCalculations.ts# Proportional allocation & heuristic AI logic
 │   │   └── pdfExport.ts        # Client-side PDF financial report generator
 │   ├── App.tsx                 # Root application controller & persistence layer
-│   ├── index.css               # Tailwind CSS v4 styling rules
+│   ├── index.css               # Tailwind CSS styling rules
 │   └── main.tsx                # React DOM entrypoint
-├── index.html                  # HTML5 template with Google typography
-├── package.json                # Project dependencies and script declarations
+├── index.html                  # HTML5 template with Google fonts
+├── package.json                # Project dependencies and npm scripts
 ├── tsconfig.json               # TypeScript compiler rules
 └── vite.config.ts              # Vite build setup with Tailwind v4 plugin
 ```
 
 ---
 
-## 📦 Build for Production
+## 📜 Available Scripts
 
-To create an optimized production build:
+In the project directory, you can run:
 
-```bash
-npm run build
-```
-
-To preview the production bundle locally:
-
-```bash
-npm run preview
-```
+- `npm run dev` — Runs the application in development mode with Hot Module Replacement (HMR).
+- `npm run build` — Compiles TypeScript and builds the production bundle into `dist/`.
+- `npm run preview` — Locally previews the built production output.
 
 ---
 
 ## 📄 License
 
-This project is open-source and available under the [MIT License](LICENSE).
+This project is licensed under the [MIT License](LICENSE).
 
 ---
 
